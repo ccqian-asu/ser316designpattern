@@ -18,7 +18,7 @@ repositories {
 dependencies {
 
     compile "junit:junit:4.12"
-    compile files('cls/')
+
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -59,6 +59,7 @@ tasks.withType(com.github.spotbugs.SpotBugsTask) {
 /*
 test {
     filter {
+//specific test class
 //specific test class
         includeTestsMatching "GivenWhiteBox"
         includeTestsMatching "CourseTest"
