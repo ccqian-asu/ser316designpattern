@@ -2,6 +2,7 @@ package entity;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
 public class Dealership {
     private int parkingSpaces;
     private String manufacturer;
@@ -13,6 +14,22 @@ public class Dealership {
     public Dealership(int parkingSpaces, String manufacturer, String carName) {
         this.parkingSpaces = parkingSpaces;
         this.manufacturer = manufacturer;
+        this.carName = carName;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public void setCarName(String carName) {
         this.carName = carName;
     }
 

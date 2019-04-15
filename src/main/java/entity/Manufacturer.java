@@ -2,6 +2,8 @@ package entity;
 
 import java.util.ArrayList;
 
+
+
 public class Manufacturer {
     private String name;
     private int balance;

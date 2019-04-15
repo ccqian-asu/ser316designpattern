@@ -2,6 +2,7 @@ package entity;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
 public class Factory {
     private String carType;
     private String carName;
@@ -14,6 +15,14 @@ public class Factory {
         this.carType = carType;
         this.carName = carName;
         this.trade = trade;
+        this.parts = parts;
+    }
+
+    public ArrayList<Part> getParts() {
+        return parts;
+    }
+
+    public void setParts(ArrayList<Part> parts) {
         this.parts = parts;
     }
 
