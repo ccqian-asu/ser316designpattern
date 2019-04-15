@@ -41,6 +41,11 @@ public class Factory {
         this.trade = trade;
     }
 
+    public boolean addEmployee(Employee employee) {
+        this.employees.add(employee);
+        return true;
+    }
+
     public ArrayList<Employee> getEmployees() {
         return employees;
     }

@@ -1,7 +1,5 @@
 
-import entity.Factory;
-import entity.Manufacturer;
-import entity.Part;
+import entity.*;
 
 import java.util.ArrayList;
 
@@ -10,8 +8,6 @@ public class Main {
         System.out.println("===Setup===");
         System.out.println("Creating Manufacturer: Cadillac");
         Manufacturer manufacturer1 = new Manufacturer("Cadillac",500000);
-        System.out.println("Manufacturer 1: "+manufacturer1.getName());
-        System.out.println("Adding Factory:");
 
         //Create Standard Parts List for car
         Part engine = new Part("V6");
@@ -20,8 +16,21 @@ public class Main {
         partsList.add(engine);
         partsList.add(wheels);
 
+        System.out.println("Adding Factory");
         Factory factory1 = new Factory("Sport","CTS","Cheap",partsList);
         manufacturer1.addFactory(factory1);
+
+        System.out.println("Adding Employees to Factory");
+        manufacturer1.getFactories().get(0).addEmployee(new Employee("Bill",1500,'f','b'));
+
+        System.out.println("Adding Dealership");
+        manufacturer1.addDealership(new Dealership(10,"Cadillac","CTS"));
+
+        System.out.println("Adding Employees to Dealership");
+        manufacturer1.getDealerships().get(0).addEmployee(new Employee("Bob",1500,'d','b'));
+
+
+
 
 
 

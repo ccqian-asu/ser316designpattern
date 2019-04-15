@@ -39,6 +39,11 @@ public class Manufacturer {
         return true;
     }
 
+    public boolean addDealership(Dealership dealership) {
+        this.dealerships.add(dealership);
+        return true;
+    }
+
     public void setFactories(ArrayList<Factory> factories) {
         this.factories = factories;
     }
