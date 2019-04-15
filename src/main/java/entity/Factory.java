@@ -6,13 +6,15 @@ public class Factory {
     private String carType;
     private String carName;
     private String trade;
+    private ArrayList<Part> parts = new ArrayList<>();
 
     private ArrayList<Employee> employees = new ArrayList<>();
 
-    public Factory(String carType, String carName, String trade) {
+    public Factory(String carType, String carName, String trade, ArrayList<Part> parts) {
         this.carType = carType;
         this.carName = carName;
         this.trade = trade;
+        this.parts = parts;
     }
 
     public String getCarType() {
