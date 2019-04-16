@@ -8,6 +8,11 @@ public class Truck extends Car {
     private String manufacturer;
     private ArrayList<Part> parts = new ArrayList<>();
 
+    /**
+     * Constructor for Truck.
+     * @param name Name of car
+     * @param manufacturer Manufacturer of car
+     */
     public Truck(String name, String manufacturer) {
         this.name = name;
         this.manufacturer = manufacturer;

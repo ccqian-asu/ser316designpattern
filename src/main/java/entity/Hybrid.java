@@ -8,7 +8,11 @@ public class Hybrid extends Car {
     private String manufacturer;
     private ArrayList<Part> parts = new ArrayList<>();
 
-
+    /**
+     * Constructor for Hybrid.
+     * @param name Name of car
+     * @param manufacturer Manufacturer of car
+     */
     public Hybrid(String name, String manufacturer) {
         this.name = name;
         this.manufacturer = manufacturer;

@@ -22,7 +22,7 @@ public class CarFactoryTest {
      Description: We will test coverage for CarFactory
      */
     public void carFactoryNodeCoverage() {
-        
+
         //Testing Sports Car
         Car newSportCar = CarFactory.getCar("Sport","CTS","Cadillac");
         //Testing Hybrid Car

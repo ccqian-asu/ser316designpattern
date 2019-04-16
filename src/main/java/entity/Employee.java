@@ -6,6 +6,13 @@ public class Employee {
     private char type;
     private char payStrategy;
 
+    /**
+     * Constructor for Employee.
+     * @param name Name of employee
+     * @param salary Employee salary
+     * @param type Employee type
+     * @param payStrategy Employee pay period
+     */
     public Employee(String name, int salary, char type, char payStrategy) {
         this.name = name;
         this.salary = salary;

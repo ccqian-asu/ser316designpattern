@@ -8,6 +8,11 @@ public class Manufacturer {
     private ArrayList<Factory> factories = new ArrayList<>();
     private ArrayList<Dealership> dealerships = new ArrayList<>();
 
+    /**
+     * Constructor for Manufacturer.
+     * @param name Name of manufacturer
+     * @param balance account balance
+     */
     public Manufacturer(String name, int balance) {
         this.name = name;
         this.balance = balance;

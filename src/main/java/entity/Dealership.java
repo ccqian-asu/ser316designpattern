@@ -10,6 +10,12 @@ public class Dealership {
     private ArrayList<Car> cars = new ArrayList<>();
     private ArrayList<Employee> employees = new ArrayList<>();
 
+    /**
+     * Constructor for Dealership.
+     * @param parkingSpaces Amount of spaces available
+     * @param manufacturer Manufacturer of the car
+     * @param carName Name of the car
+     */
     public Dealership(int parkingSpaces, String manufacturer, String carName) {
         this.parkingSpaces = parkingSpaces;
         this.manufacturer = manufacturer;

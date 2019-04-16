@@ -9,6 +9,12 @@ public class Factory {
 
     private ArrayList<Employee> employees = new ArrayList<>();
 
+    /**
+     * Constructor for Factory.
+     * @param carType The type of car
+     * @param carName Name of the car
+     * @param trade The trade of the factory
+     */
     public Factory(String carType, String carName, String trade) {
         this.carType = carType;
         this.carName = carName;

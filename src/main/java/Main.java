@@ -1,10 +1,22 @@
 
-import entity.*;
+import entity.Car;
+import entity.Dealership;
+import entity.Employee;
+import entity.Factory;
+import entity.Manufacturer;
 import factory.CarFactory;
 
-import java.util.ArrayList;
-
+/**
+ * The Main program for Week 5/6 in SER316.
+ * Car Manufacturer.
+ *
+ * @author  Charles Qian (ccqian)
+ */
 public class Main {
+
+    /**
+     * The main method is where we will create manufacturers and cars.
+     */
     public static void main(String[] args) {
         System.out.println("===Setup===");
         System.out.println("Creating Manufacturer: Cadillac");
