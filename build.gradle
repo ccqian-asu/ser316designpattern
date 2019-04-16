@@ -6,7 +6,7 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 
 
-mainClassName = 'main.java.Main'
+mainClassName = 'Main'
 
 
 // In this section you declare where to find the dependencies of your project
@@ -18,17 +18,19 @@ repositories {
 dependencies {
 
     compile "junit:junit:4.12"
-    compile files('cls/')
+
 }
 
 ///////////////////////////////////////////////////////////////////////////
 // Configure Checkstyle
 ///////////////////////////////////////////////////////////////////////////
 apply plugin: 'checkstyle'
+
 checkstyle {
     // Keep checkstyle a little quieter
     ignoreFailures = true
     showViolations = false
+
 }
 
 tasks.withType(Checkstyle) {
@@ -59,6 +61,7 @@ tasks.withType(com.github.spotbugs.SpotBugsTask) {
 /*
 test {
     filter {
+//specific test class
 //specific test class
         includeTestsMatching "GivenWhiteBox"
         includeTestsMatching "CourseTest"
