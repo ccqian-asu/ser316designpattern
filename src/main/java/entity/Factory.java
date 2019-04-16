@@ -2,28 +2,17 @@ package entity;
 
 import java.util.ArrayList;
 
-@SuppressWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
 public class Factory {
     private String carType;
     private String carName;
     private String trade;
-    private ArrayList<Part> parts = new ArrayList<>();
 
     private ArrayList<Employee> employees = new ArrayList<>();
 
-    public Factory(String carType, String carName, String trade, ArrayList<Part> parts) {
+    public Factory(String carType, String carName, String trade) {
         this.carType = carType;
         this.carName = carName;
         this.trade = trade;
-        this.parts = parts;
-    }
-
-    public ArrayList<Part> getParts() {
-        return parts;
-    }
-
-    public void setParts(ArrayList<Part> parts) {
-        this.parts = parts;
     }
 
     public String getCarType() {

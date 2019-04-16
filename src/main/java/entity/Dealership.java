@@ -2,7 +2,6 @@ package entity;
 
 import java.util.ArrayList;
 
-@SuppressWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
 public class Dealership {
     private int parkingSpaces;
     private String manufacturer;

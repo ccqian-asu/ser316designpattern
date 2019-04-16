@@ -1,6 +1,5 @@
 package entity;
 
-@SuppressWarnings("URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD")
 public class Employee {
     private String name;
     private int salary;
