@@ -29,13 +29,5 @@ public class Main {
         Car newCar = CarFactory.getCar("Sport","CTS","Cadillac");
 
         System.out.println(newCar);
-
-
-
-
-
-
-
-
     }
 }
