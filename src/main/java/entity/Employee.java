@@ -1,30 +1,50 @@
 package entity;
 
+import strategy.PaymentStrategy;
+
 public class Employee {
     private String name;
-    private int salary;
+    private int balance;
     private char type;
-    private char payStrategy;
+    private PaymentStrategy payStrategy;
 
     /**
      * Constructor for Employee.
      * @param name Name of employee
-     * @param salary Employee salary
      * @param type Employee type
      * @param payStrategy Employee pay period
      */
-    public Employee(String name, int salary, char type, char payStrategy) {
+    public Employee(String name, char type, PaymentStrategy payStrategy) {
         this.name = name;
-        this.salary = salary;
         this.type = type;
         this.payStrategy = payStrategy;
+        this.balance = 0;
     }
 
-    public char getPayStrategy() {
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    /**
+     * Pays the employee based on payment strategy.
+     * @param week the pay week
+     */
+    public void pay(int week) {
+        int paid = payStrategy.pay(week);
+        balance += paid;
+        System.out.println(name + " paid $" + paid + " (Balance: " + balance + ")");
+
+    }
+
+    public PaymentStrategy getPayStrategy() {
         return payStrategy;
     }
 
-    public void setPayStrategy(char payStrategy) {
+    public void setPayStrategy(PaymentStrategy payStrategy) {
         this.payStrategy = payStrategy;
     }
 
@@ -34,14 +54,6 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
     }
 
     public char getType() {
