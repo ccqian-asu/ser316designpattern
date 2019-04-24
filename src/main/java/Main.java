@@ -18,11 +18,10 @@ public class Main {
      * The main method is where we will create manufacturers and cars.
      */
     public static void main(String[] args) {
-        System.out.println("===Setup===");
+        System.out.println("===Factory Pattern===");
         System.out.println("Creating Manufacturer: Cadillac");
         Manufacturer manufacturer1 = new Manufacturer("Cadillac",500000);
-
-
+        Car newSportCar = CarFactory.getCar("Sport","CTS","Cadillac");
 
         System.out.println("Adding Factory");
         Factory factory1 = new Factory("Sport","CTS","Cheap");
