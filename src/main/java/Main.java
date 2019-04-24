@@ -7,11 +7,12 @@ import entity.Manufacturer;
 import factory.CarFactory;
 import filter.Criteria;
 import filter.CriteriaHybrid;
+import java.util.ArrayList;
+import java.util.List;
 import strategy.BiweeklyStrategy;
 import strategy.WeeklyStrategy;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * The Main program for Week 5/6 in SER316.
@@ -29,11 +30,6 @@ public class Main {
         System.out.println("===Factory Pattern===");
         System.out.println("Creating Manufacturer: Cadillac");
         Manufacturer manufacturer1 = new Manufacturer("Cadillac",500000);
-        Car newSportCar = CarFactory.getCar("Sport","ATS","Cadillac");
-        Car newSportCar2 = CarFactory.getCar("Sport","CTS","Cadillac");
-        Car newHybridCar = CarFactory.getCar("Hybrid","Prius","Toyota");
-        Car newTruckCar = CarFactory.getCar("Truck","F-150","Ford");
-        Car anotherHybridCar = CarFactory.getCar("Hybrid","Leaf","Nissan");
 
         System.out.println("Adding Factory");
         Factory factory1 = new Factory("Sport","CTS","Cheap");
@@ -50,9 +46,11 @@ public class Main {
         //Strategy Pattern: Pay Employees
         System.out.println("===Strategy Pattern===");
         System.out.println("Adding Employees to Dealership w/ weekly pay");
-        manufacturer1.getDealerships().get(0).addEmployee(new Employee("Bill",'f',new WeeklyStrategy(500)));
+        manufacturer1.getDealerships().get(0).addEmployee(
+                new Employee("Bill",'f',new WeeklyStrategy(500)));
         System.out.println("Adding Employees to Dealership w/ biweekly pay");
-        manufacturer1.getDealerships().get(0).addEmployee(new Employee("Bob",'d',new BiweeklyStrategy(2,1000)));
+        manufacturer1.getDealerships().get(0).addEmployee(new Employee("Bob",'d',
+                new BiweeklyStrategy(2,1000)));
 
 
         System.out.println("Simulating 6 weeks pay");
@@ -68,6 +66,10 @@ public class Main {
         System.out.println("Filtering inventory for Hybrid cars");
 
         List<Car> cars = new ArrayList<Car>();
+        Car newSportCar = CarFactory.getCar("Sport","ATS","Cadillac");
+        Car newHybridCar = CarFactory.getCar("Hybrid","Prius","Toyota");
+        Car newTruckCar = CarFactory.getCar("Truck","F-150","Ford");
+        Car anotherHybridCar = CarFactory.getCar("Hybrid","Leaf","Nissan");
         cars.add(newHybridCar);
         cars.add(newSportCar);
         cars.add(anotherHybridCar);

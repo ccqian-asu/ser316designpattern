@@ -29,6 +29,10 @@ public class Employee {
         this.balance = balance;
     }
 
+    /**
+     * Pays the employee based on payment strategy.
+     * @param week the pay week
+     */
     public void pay(int week) {
         int paid = payStrategy.pay(week);
         balance += paid;

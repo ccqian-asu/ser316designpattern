@@ -32,13 +32,14 @@ public class StrategyTest {
         Employee emp1 = new Employee("Charles", 'd', new WeeklyStrategy(800));
         Employee emp2 = new Employee("Billy", 'd', new BiweeklyStrategy(2,2500));
 
-        for (int week = 1;week < 7; week++) {
-            emp1.pay(week);
-            emp2.pay(week);
-        }
+        assertTrue(emp1.getPayStrategy().pay(1) == 800);
+        assertTrue(emp2.getPayStrategy().pay(1) == 0);
 
-        assertTrue(emp1.getBalance() == 4800);
-        assertTrue(emp2.getBalance() == 7500);
+        assertTrue(emp1.getPayStrategy().pay(2) == 800);
+        assertTrue(emp2.getPayStrategy().pay(2) == 2500);
+
+        assertTrue(emp1.getPayStrategy().pay(3) == 800);
+        assertTrue(emp2.getPayStrategy().pay(3) == 0);
     }
 
 

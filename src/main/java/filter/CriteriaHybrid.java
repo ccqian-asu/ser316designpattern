@@ -1,8 +1,8 @@
 package filter;
 
+import entity.Car;
 import java.util.ArrayList;
 import java.util.List;
-import entity.Car;
 
 public class CriteriaHybrid implements Criteria {
     @Override
@@ -12,8 +12,9 @@ public class CriteriaHybrid implements Criteria {
 
         //Create a list of cars meeting criteria
         for (Car car : cars) {
-                    if (car.getType().equalsIgnoreCase("Hybrid"))
-                        criteriaMet.add(car);
+            if (car.getType().equalsIgnoreCase("Hybrid")) {
+                criteriaMet.add(car);
+            }
         }
         return criteriaMet;
     }
