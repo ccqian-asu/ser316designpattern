@@ -29,9 +29,9 @@ public class FilterTest {
         List<Car> cars = new ArrayList<Car>();
         List<Car> hybrids = new ArrayList<Car>();
 
-        Car newSportCar = CarFactory.getCar("Sport","CTS","Cadillac");
+        Car newSportCar = CarFactory.getCar("Sport","ATS","Cadillac");
         Car newHybridCar = CarFactory.getCar("Hybrid","Prius","Toyota");
-        Car newTruckCar = CarFactory.getCar("Truck","F-150","Ford");
+        Car newTruckCar = CarFactory.getCar("Truck","Raptor","Ford");
         Car anotherHybridCar = CarFactory.getCar("Hybrid","Leaf","Nissan");
 
         cars.add(newHybridCar);
