@@ -46,7 +46,7 @@ public class FilterTest {
 
         List<Car> result = new ArrayList<Car>(filtered.meetCriteria(cars));
 
-        assertTrue(result == hybrids);
+        assertTrue(result.equals(hybrids));
 
 
     }
